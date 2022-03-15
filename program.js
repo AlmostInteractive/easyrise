@@ -83,11 +83,13 @@
 		
 		// click Save to close dialog
 		document.querySelector('button.mat-focus-indicator:nth-child(2)').click();
+		await waitFor('.checkmark > img');
 		
-		// submit the entry and wait for completion
-		(await waitFor('.checkmark > img')).click();
-		await sleep(250);
-		await waitForGone('.checkmark');
+		// NOTE: removing this to allow user to make adjustments before submission
+		// submit the entry and wait for completion		
+		(await waitFor('.checkmark > img'));
+		// await sleep(250);
+		// await waitForGone('.checkmark');
 	}
 	
 	async function getValidWorkCodes() {		
