@@ -43,7 +43,7 @@
 	async function addNewEntry(day, code, hours) {
 		console.log(`add ${day} ${code} ${hours}`);
 		let elem;
-		const offsetDay = day + 2;
+		const offsetDay = day + 1;
 		if (day !== _lastKnownDay) {
 			_lastKnownHour = 8;
 			_lastKnownDay = day;
